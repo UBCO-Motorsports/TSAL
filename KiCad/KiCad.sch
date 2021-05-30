@@ -457,24 +457,13 @@ F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 8550 3200 50  0001 C CNN
 	1    8550 3200
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x05_Female J2
-U 1 1 60B41F0A
-P 8350 5200
-F 0 "J2" H 8378 5226 50  0000 L CNN
-F 1 "Conn_01x05_Female" H 8378 5135 50  0000 L CNN
-F 2 "" H 8350 5200 50  0001 C CNN
-F 3 "~" H 8350 5200 50  0001 C CNN
-	1    8350 5200
-	1    0    0    -1  
-$EndComp
-Text GLabel 8150 5400 0    50   Input ~ 0
+Text GLabel 8150 5100 0    50   Input ~ 0
 GLV-
 Text GLabel 8150 5000 0    50   Input ~ 0
 GLV+
-Text GLabel 8150 5100 0    50   Input ~ 0
-GRN+
 Text GLabel 8150 5200 0    50   Input ~ 0
+GRN+
+Text GLabel 8150 5400 0    50   Input ~ 0
 RED+
 $Comp
 L Device:C C2
@@ -514,7 +503,7 @@ Wire Wire Line
 	6500 5000 6850 5000
 Text GLabel 7250 5300 2    50   Input ~ 0
 GLV+
-Text GLabel 8150 5300 0    50   Input ~ 0
+Text GLabel 8150 5500 0    50   Input ~ 0
 GLV-
 Text GLabel 6850 5000 2    50   Input ~ 0
 GLV-
@@ -868,4 +857,17 @@ Wire Wire Line
 Connection ~ 10450 2950
 Wire Wire Line
 	10450 2950 10500 2950
+$Comp
+L Connector:Conn_01x06_Female J2
+U 1 1 60B46070
+P 8350 5200
+F 0 "J2" H 8378 5176 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 8378 5085 50  0000 L CNN
+F 2 "" H 8350 5200 50  0001 C CNN
+F 3 "~" H 8350 5200 50  0001 C CNN
+	1    8350 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 8150 5300 0    50   Input ~ 0
+GLV-
 $EndSCHEMATC
