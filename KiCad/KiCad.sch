@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "Tractive System Active Light"
+Date "2021-05-30"
+Rev "V1"
+Comp "UBCO Motorsports"
+Comment1 "MB Joel Sol"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -346,7 +346,7 @@ L Device:C C1
 U 1 1 60B62806
 P 3650 4400
 F 0 "C1" H 3765 4446 50  0000 L CNN
-F 1 "C" H 3765 4355 50  0000 L CNN
+F 1 "10n" H 3765 4355 50  0000 L CNN
 F 2 "" H 3688 4250 50  0001 C CNN
 F 3 "~" H 3650 4400 50  0001 C CNN
 	1    3650 4400
@@ -398,10 +398,10 @@ Wire Wire Line
 Wire Wire Line
 	3650 3550 3650 4150
 $Comp
-L Isolator:4N35 U?
+L Isolator:4N35 U3
 U 1 1 60B6E158
 P 5900 3700
-F 0 "U?" H 5900 4025 50  0000 C CNN
+F 0 "U3" H 5900 4025 50  0000 C CNN
 F 1 "4N35" H 5900 3934 50  0000 C CNN
 F 2 "Package_DIP:DIP-6_W7.62mm" H 5700 3500 50  0001 L CIN
 F 3 "https://www.vishay.com/docs/81181/4n35.pdf" H 5900 3700 50  0001 L CNN
@@ -410,10 +410,10 @@ F 3 "https://www.vishay.com/docs/81181/4n35.pdf" H 5900 3700 50  0001 L CNN
 $EndComp
 NoConn ~ 6200 3600
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR09
 U 1 1 60B71455
 P 5600 3000
-F 0 "#PWR?" H 5600 2850 50  0001 C CNN
+F 0 "#PWR09" H 5600 2850 50  0001 C CNN
 F 1 "+12V" H 5615 3173 50  0000 C CNN
 F 2 "" H 5600 3000 50  0001 C CNN
 F 3 "" H 5600 3000 50  0001 C CNN
@@ -421,10 +421,10 @@ F 3 "" H 5600 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R12
 U 1 1 60B71D11
 P 5600 3250
-F 0 "R?" H 5670 3296 50  0000 L CNN
+F 0 "R12" H 5670 3296 50  0000 L CNN
 F 1 "2k" H 5670 3205 50  0000 L CNN
 F 2 "" V 5530 3250 50  0001 C CNN
 F 3 "~" H 5600 3250 50  0001 C CNN
@@ -446,4 +446,426 @@ Text Notes 2550 6000 0    197  ~ 0
 HV SIDE
 Text Notes 7000 6350 0    197  ~ 0
 LV SIDE
+$Comp
+L Timer:NE555 U4
+U 1 1 60B40805
+P 8550 3200
+F 0 "U4" H 8550 3781 50  0000 C CNN
+F 1 "NE555" H 8550 3690 50  0000 C CNN
+F 2 "" H 8550 3200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 8550 3200 50  0001 C CNN
+	1    8550 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Female J2
+U 1 1 60B41F0A
+P 8350 5200
+F 0 "J2" H 8378 5226 50  0000 L CNN
+F 1 "Conn_01x05_Female" H 8378 5135 50  0000 L CNN
+F 2 "" H 8350 5200 50  0001 C CNN
+F 3 "~" H 8350 5200 50  0001 C CNN
+	1    8350 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 8150 5400 0    50   Input ~ 0
+GLV-
+Text GLabel 8150 5000 0    50   Input ~ 0
+GLV+
+Text GLabel 8150 5100 0    50   Input ~ 0
+GRN+
+Text GLabel 8150 5200 0    50   Input ~ 0
+RED+
+$Comp
+L Device:C C2
+U 1 1 60B4980D
+P 6850 5150
+F 0 "C2" H 6965 5196 50  0000 L CNN
+F 1 "1u" H 6965 5105 50  0000 L CNN
+F 2 "" H 6888 5000 50  0001 C CNN
+F 3 "~" H 6850 5150 50  0001 C CNN
+	1    6850 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 60B4A38D
+P 7100 5300
+F 0 "D2" H 7100 5516 50  0000 C CNN
+F 1 "D" H 7100 5425 50  0000 C CNN
+F 2 "" H 7100 5300 50  0001 C CNN
+F 3 "~" H 7100 5300 50  0001 C CNN
+	1    7100 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 5300 6950 5300
+Wire Wire Line
+	6850 5300 6700 5300
+Wire Wire Line
+	6350 5300 6350 5200
+Connection ~ 6850 5300
+NoConn ~ 6350 5350
+Wire Wire Line
+	6350 5050 6500 5050
+Wire Wire Line
+	6500 5050 6500 5000
+Wire Wire Line
+	6500 5000 6850 5000
+Text GLabel 7250 5300 2    50   Input ~ 0
+GLV+
+Text GLabel 8150 5300 0    50   Input ~ 0
+GLV-
+Text GLabel 6850 5000 2    50   Input ~ 0
+GLV-
+$Comp
+L power:VCC #PWR011
+U 1 1 60B527F8
+P 6700 5300
+F 0 "#PWR011" H 6700 5150 50  0001 C CNN
+F 1 "VCC" H 6718 5473 50  0000 C CNN
+F 2 "" H 6700 5300 50  0001 C CNN
+F 3 "" H 6700 5300 50  0001 C CNN
+	1    6700 5300
+	-1   0    0    1   
+$EndComp
+Connection ~ 6700 5300
+Wire Wire Line
+	6700 5300 6350 5300
+$Comp
+L power:VCC #PWR010
+U 1 1 60B53058
+P 6350 3550
+F 0 "#PWR010" H 6350 3400 50  0001 C CNN
+F 1 "VCC" H 6367 3723 50  0000 C CNN
+F 2 "" H 6350 3550 50  0001 C CNN
+F 3 "" H 6350 3550 50  0001 C CNN
+	1    6350 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3550 6350 3700
+Wire Wire Line
+	6350 3700 6200 3700
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:2N7002 Q1
+U 1 1 60B54F3D
+P 6800 3800
+F 0 "Q1" H 6908 3853 60  0000 L CNN
+F 1 "2N7002" H 6908 3747 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 7000 4000 60  0001 L CNN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 7000 4100 60  0001 L CNN
+F 4 "2N7002NCT-ND" H 7000 4200 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N7002" H 7000 4300 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 7000 4400 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 7000 4500 60  0001 L CNN "Family"
+F 8 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 7000 4600 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/2N7002/2N7002NCT-ND/244664" H 7000 4700 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 60V 115MA SOT-23" H 7000 4800 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 7000 4900 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 7000 5000 60  0001 L CNN "Status"
+	1    6800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 60B570B7
+P 6300 4050
+F 0 "R13" H 6370 4096 50  0000 L CNN
+F 1 "1k" H 6370 4005 50  0000 L CNN
+F 2 "" V 6230 4050 50  0001 C CNN
+F 3 "~" H 6300 4050 50  0001 C CNN
+	1    6300 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3800 6300 3800
+Wire Wire Line
+	6300 3800 6300 3900
+Wire Wire Line
+	6500 3900 6300 3900
+Connection ~ 6300 3900
+Wire Wire Line
+	6300 4200 6800 4200
+Wire Wire Line
+	6800 4200 6800 4000
+Text GLabel 6300 4350 0    50   Input ~ 0
+GLV-
+Wire Wire Line
+	6300 4200 6300 4350
+Connection ~ 6300 4200
+$Comp
+L power:VCC #PWR012
+U 1 1 60B5BFB5
+P 8550 2350
+F 0 "#PWR012" H 8550 2200 50  0001 C CNN
+F 1 "VCC" H 8567 2523 50  0000 C CNN
+F 2 "" H 8550 2350 50  0001 C CNN
+F 3 "" H 8550 2350 50  0001 C CNN
+	1    8550 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 2350 8550 2400
+Text GLabel 8550 4200 3    50   Input ~ 0
+GLV-
+Wire Wire Line
+	9050 3400 9050 3550
+Wire Wire Line
+	9050 4000 7950 4000
+Wire Wire Line
+	7950 4000 7950 3000
+Wire Wire Line
+	7950 3000 8050 3000
+Wire Wire Line
+	6800 3600 6800 3400
+Wire Wire Line
+	6800 3400 7100 3400
+$Comp
+L Device:R R14
+U 1 1 60B635F4
+P 6800 2900
+F 0 "R14" H 6870 2946 50  0000 L CNN
+F 1 "22k" H 6870 2855 50  0000 L CNN
+F 2 "" V 6730 2900 50  0001 C CNN
+F 3 "~" H 6800 2900 50  0001 C CNN
+	1    6800 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 3050 6800 3400
+Connection ~ 6800 3400
+Wire Wire Line
+	6800 2750 6800 2400
+Wire Wire Line
+	6800 2400 7350 2400
+Connection ~ 8550 2400
+Wire Wire Line
+	8550 2400 8550 2800
+$Comp
+L Device:C C3
+U 1 1 60B66D62
+P 7350 3850
+F 0 "C3" H 7465 3896 50  0000 L CNN
+F 1 "100n" H 7465 3805 50  0000 L CNN
+F 2 "" H 7388 3700 50  0001 C CNN
+F 3 "~" H 7350 3850 50  0001 C CNN
+	1    7350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 60B673D4
+P 7650 3850
+F 0 "C4" H 7765 3896 50  0000 L CNN
+F 1 "100n" H 7765 3805 50  0000 L CNN
+F 2 "" H 7688 3700 50  0001 C CNN
+F 3 "~" H 7650 3850 50  0001 C CNN
+	1    7650 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3600 8550 4200
+Wire Wire Line
+	7350 4000 7350 4200
+Wire Wire Line
+	7350 4200 7650 4200
+Wire Wire Line
+	7650 4000 7650 4200
+Connection ~ 7650 4200
+Wire Wire Line
+	7650 4200 8550 4200
+Wire Wire Line
+	7650 3700 7650 3200
+Wire Wire Line
+	7650 3200 8050 3200
+Wire Wire Line
+	7350 3700 7350 2400
+Connection ~ 7350 2400
+Wire Wire Line
+	7350 2400 8550 2400
+$Comp
+L Device:R R15
+U 1 1 60B700D8
+P 9300 2700
+F 0 "R15" H 9370 2746 50  0000 L CNN
+F 1 "22k" H 9370 2655 50  0000 L CNN
+F 2 "" V 9230 2700 50  0001 C CNN
+F 3 "~" H 9300 2700 50  0001 C CNN
+	1    9300 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3200 9300 3200
+Wire Wire Line
+	9300 3200 9300 2850
+Wire Wire Line
+	8550 2400 9300 2400
+Wire Wire Line
+	9300 2400 9300 2550
+$Comp
+L Device:R R16
+U 1 1 60B74B4C
+P 9300 3350
+F 0 "R16" H 9370 3396 50  0000 L CNN
+F 1 "220k" H 9370 3305 50  0000 L CNN
+F 2 "" V 9230 3350 50  0001 C CNN
+F 3 "~" H 9300 3350 50  0001 C CNN
+	1    9300 3350
+	-1   0    0    1   
+$EndComp
+Connection ~ 9300 3200
+Wire Wire Line
+	9300 3500 9300 3550
+Wire Wire Line
+	9300 3550 9050 3550
+Connection ~ 9050 3550
+Wire Wire Line
+	9050 3550 9050 3800
+$Comp
+L Device:C C5
+U 1 1 60B771F0
+P 9250 3950
+F 0 "C5" H 9365 3996 50  0000 L CNN
+F 1 "1u" H 9365 3905 50  0000 L CNN
+F 2 "" H 9288 3800 50  0001 C CNN
+F 3 "~" H 9250 3950 50  0001 C CNN
+	1    9250 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3800 9250 3800
+Connection ~ 9050 3800
+Wire Wire Line
+	9050 3800 9050 4000
+Wire Wire Line
+	9250 4100 9250 4200
+Wire Wire Line
+	9250 4200 8550 4200
+Connection ~ 8550 4200
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:2N7002 Q3
+U 1 1 60B7BD29
+P 9850 3100
+F 0 "Q3" H 9958 3153 60  0000 L CNN
+F 1 "2N7002" H 9958 3047 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 10050 3300 60  0001 L CNN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 10050 3400 60  0001 L CNN
+F 4 "2N7002NCT-ND" H 10050 3500 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N7002" H 10050 3600 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 10050 3700 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 10050 3800 60  0001 L CNN "Family"
+F 8 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 10050 3900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/2N7002/2N7002NCT-ND/244664" H 10050 4000 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 60V 115MA SOT-23" H 10050 4100 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 10050 4200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10050 4300 60  0001 L CNN "Status"
+	1    9850 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3000 9550 3000
+Wire Wire Line
+	9550 3000 9550 3200
+Text GLabel 9850 3650 3    50   Input ~ 0
+GLV-
+Wire Wire Line
+	9850 3300 9850 3650
+$Comp
+L Device:R R17
+U 1 1 60B8149E
+P 9850 2450
+F 0 "R17" H 9920 2496 50  0000 L CNN
+F 1 "10k" H 9920 2405 50  0000 L CNN
+F 2 "" V 9780 2450 50  0001 C CNN
+F 3 "~" H 9850 2450 50  0001 C CNN
+	1    9850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 2900 9850 2600
+Text GLabel 10200 1850 1    50   Input ~ 0
+GLV+
+$Comp
+L Device:R R18
+U 1 1 60B83C17
+P 10950 2950
+F 0 "R18" H 11020 2996 50  0000 L CNN
+F 1 "2k" H 11020 2905 50  0000 L CNN
+F 2 "" V 10880 2950 50  0001 C CNN
+F 3 "~" H 10950 2950 50  0001 C CNN
+	1    10950 2950
+	0    1    1    0   
+$EndComp
+Text GLabel 11150 2950 3    50   Input ~ 0
+GLV-
+Wire Wire Line
+	11100 2950 11150 2950
+$Comp
+L Device:LED D3
+U 1 1 60B87126
+P 10650 2950
+F 0 "D3" H 10643 2695 50  0000 C CNN
+F 1 "LEDR" H 10643 2786 50  0000 C CNN
+F 2 "" H 10650 2950 50  0001 C CNN
+F 3 "~" H 10650 2950 50  0001 C CNN
+	1    10650 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Lukas_Library:MCT06P10-TP Q2
+U 1 1 60B8D686
+P 7200 4200
+F 0 "Q2" H 7358 3846 50  0000 L CNN
+F 1 "MCT06P10-TP" H 7358 3755 50  0000 L CNN
+F 2 "" H 7200 3600 50  0001 C CNN
+F 3 "https://www.digikey.ca/en/products/detail/micro-commercial-co/MCT06P10-TP/10054363" H 7200 3600 50  0001 C CNN
+	1    7200 4200
+	1    0    0    -1  
+$EndComp
+Text GLabel 7250 4300 2    50   Input ~ 0
+GLV+
+Wire Wire Line
+	7250 4300 7250 4400
+Wire Wire Line
+	7100 3400 7100 4350
+Wire Wire Line
+	7100 4350 6950 4350
+Wire Wire Line
+	6950 4350 6950 4700
+Connection ~ 7100 3400
+Wire Wire Line
+	7100 3400 8050 3400
+Text GLabel 7400 4800 2    50   Input ~ 0
+GRN+
+Wire Wire Line
+	7250 4800 7400 4800
+$Comp
+L Lukas_Library:MCT06P10-TP Q4
+U 1 1 60B95807
+P 10150 1700
+F 0 "Q4" H 10308 1346 50  0000 L CNN
+F 1 "MCT06P10-TP" H 10308 1255 50  0000 L CNN
+F 2 "" H 10150 1100 50  0001 C CNN
+F 3 "https://www.digikey.ca/en/products/detail/micro-commercial-co/MCT06P10-TP/10054363" H 10150 1100 50  0001 C CNN
+	1    10150 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 2200 9850 2200
+Wire Wire Line
+	9850 2200 9850 2300
+Wire Wire Line
+	10200 1850 10200 1900
+Wire Wire Line
+	10200 2300 10200 2950
+Wire Wire Line
+	10200 2950 10450 2950
+Text GLabel 10450 3300 3    50   Input ~ 0
+RED+
+Wire Wire Line
+	10450 2950 10450 3300
+Connection ~ 10450 2950
+Wire Wire Line
+	10450 2950 10500 2950
 $EndSCHEMATC
