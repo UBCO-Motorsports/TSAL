@@ -1,0 +1,400 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 60B3D159
+P 750 1150
+F 0 "J1" H 642 825 50  0000 C CNN
+F 1 "HV input" H 642 916 50  0000 C CNN
+F 2 "" H 750 1150 50  0001 C CNN
+F 3 "~" H 750 1150 50  0001 C CNN
+	1    750  1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60B3E40B
+P 1500 950
+F 0 "R1" V 1293 950 50  0000 C CNN
+F 1 "250k" V 1384 950 50  0000 C CNN
+F 2 "" V 1430 950 50  0001 C CNN
+F 3 "~" H 1500 950 50  0001 C CNN
+	1    1500 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60B3F3BA
+P 1900 950
+F 0 "R2" V 1693 950 50  0000 C CNN
+F 1 "250k" V 1784 950 50  0000 C CNN
+F 2 "" V 1830 950 50  0001 C CNN
+F 3 "~" H 1900 950 50  0001 C CNN
+	1    1900 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60B3F7D0
+P 2300 950
+F 0 "R3" V 2093 950 50  0000 C CNN
+F 1 "250k" V 2184 950 50  0000 C CNN
+F 2 "" V 2230 950 50  0001 C CNN
+F 3 "~" H 2300 950 50  0001 C CNN
+	1    2300 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60B3FC78
+P 2700 950
+F 0 "R4" V 2493 950 50  0000 C CNN
+F 1 "200k" V 2584 950 50  0000 C CNN
+F 2 "" V 2630 950 50  0001 C CNN
+F 3 "~" H 2700 950 50  0001 C CNN
+	1    2700 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 60B40280
+P 3250 1400
+F 0 "R6" H 3180 1354 50  0000 R CNN
+F 1 "50k" H 3180 1445 50  0000 R CNN
+F 2 "" V 3180 1400 50  0001 C CNN
+F 3 "~" H 3250 1400 50  0001 C CNN
+	1    3250 1400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Zener D1
+U 1 1 60B40BA9
+P 3850 1250
+F 0 "D1" V 3804 1329 50  0000 L CNN
+F 1 "12V" V 3895 1329 50  0000 L CNN
+F 2 "" H 3850 1250 50  0001 C CNN
+F 3 "~" H 3850 1250 50  0001 C CNN
+	1    3850 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Lukas_Library:PQMC3-D12-S12-S U1
+U 1 1 60B4437F
+P 8700 4650
+F 0 "U1" H 8700 4615 50  0000 C CNN
+F 1 "PQMC3-D12-S12-S" H 8700 4524 50  0000 C CNN
+F 2 "Package_SIP:SIP-8_19x3mm_P2.54mm" H 8700 4650 50  0001 C CNN
+F 3 "https://www.cui.com/product/resource/pqmc3-s.pdf" H 8700 4650 50  0001 C CNN
+	1    8700 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR01
+U 1 1 60B452C5
+P 7700 5250
+F 0 "#PWR01" H 7700 5100 50  0001 C CNN
+F 1 "+12V" H 7715 5423 50  0000 C CNN
+F 2 "" H 7700 5250 50  0001 C CNN
+F 3 "" H 7700 5250 50  0001 C CNN
+	1    7700 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 5250 7700 5250
+$Comp
+L power:GND #PWR02
+U 1 1 60B45ACC
+P 8150 5100
+F 0 "#PWR02" H 8150 4850 50  0001 C CNN
+F 1 "GND" V 8155 4972 50  0000 R CNN
+F 2 "" H 8150 5100 50  0001 C CNN
+F 3 "" H 8150 5100 50  0001 C CNN
+	1    8150 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 5100 8150 5100
+$Comp
+L power:+12V #PWR?
+U 1 1 60B48490
+P 1400 2100
+F 0 "#PWR?" H 1400 1950 50  0001 C CNN
+F 1 "+12V" H 1415 2273 50  0000 C CNN
+F 2 "" H 1400 2100 50  0001 C CNN
+F 3 "" H 1400 2100 50  0001 C CNN
+	1    1400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B48C7B
+P 1850 2100
+F 0 "R?" V 1643 2100 50  0000 C CNN
+F 1 "75k" V 1734 2100 50  0000 C CNN
+F 2 "" V 1780 2100 50  0001 C CNN
+F 3 "~" H 1850 2100 50  0001 C CNN
+	1    1850 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B49150
+P 2300 2100
+F 0 "R?" V 2093 2100 50  0000 C CNN
+F 1 "24k" V 2184 2100 50  0000 C CNN
+F 2 "" V 2230 2100 50  0001 C CNN
+F 3 "~" H 2300 2100 50  0001 C CNN
+	1    2300 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B494F6
+P 3000 2100
+F 0 "R?" V 2793 2100 50  0000 C CNN
+F 1 "900" V 2884 2100 50  0000 C CNN
+F 2 "" V 2930 2100 50  0001 C CNN
+F 3 "~" H 3000 2100 50  0001 C CNN
+	1    3000 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1400 2100 1700 2100
+Wire Wire Line
+	2000 2100 2050 2100
+Wire Wire Line
+	2450 2100 2850 2100
+$Comp
+L power:GND #PWR?
+U 1 1 60B49DFE
+P 3200 2100
+F 0 "#PWR?" H 3200 1850 50  0001 C CNN
+F 1 "GND" V 3205 1972 50  0000 R CNN
+F 2 "" H 3200 2100 50  0001 C CNN
+F 3 "" H 3200 2100 50  0001 C CNN
+	1    3200 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3150 2100 3200 2100
+Text GLabel 1950 2800 0    50   Input ~ 0
+VREF1
+Wire Wire Line
+	2050 2100 2050 2500
+Wire Wire Line
+	2050 2800 1950 2800
+Connection ~ 2050 2100
+Wire Wire Line
+	2050 2100 2150 2100
+Text Label 2050 2350 0    50   ~ 0
+2.99V
+$Comp
+L power:GND #PWR?
+U 1 1 60B4ADE2
+P 1100 1600
+F 0 "#PWR?" H 1100 1350 50  0001 C CNN
+F 1 "GND" H 1105 1427 50  0000 C CNN
+F 2 "" H 1100 1600 50  0001 C CNN
+F 3 "" H 1100 1600 50  0001 C CNN
+	1    1100 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  1050 1350 1050
+Wire Wire Line
+	1350 1050 1350 950 
+Wire Wire Line
+	1650 950  1750 950 
+Wire Wire Line
+	2050 950  2150 950 
+Wire Wire Line
+	2450 950  2550 950 
+Wire Wire Line
+	2850 950  3250 950 
+Wire Wire Line
+	3250 950  3250 1100
+Wire Wire Line
+	1100 1150 950  1150
+Wire Wire Line
+	3250 1550 1100 1550
+Wire Wire Line
+	1100 1150 1100 1550
+Connection ~ 1100 1550
+Wire Wire Line
+	1100 1550 1100 1600
+$Comp
+L dk_Linear-Comparators:LM311N_NOPB U?
+U 1 1 60B4CC46
+P 8700 3750
+F 0 "U?" H 9044 3803 60  0000 L CNN
+F 1 "LM311N_NOPB" H 9044 3697 60  0000 L CNN
+F 2 "digikey-footprints:DIP-8_W7.62mm" H 8900 3950 60  0001 L CNN
+F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm311-n" H 8900 4050 60  0001 L CNN
+F 4 "LM311NNS/NOPB-ND" H 8900 4150 60  0001 L CNN "Digi-Key_PN"
+F 5 "LM311N/NOPB" H 8900 4250 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 8900 4350 60  0001 L CNN "Category"
+F 7 "Linear - Comparators" H 8900 4450 60  0001 L CNN "Family"
+F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm311-n" H 8900 4550 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/texas-instruments/LM311N-NOPB/LM311NNS-NOPB-ND/6175" H 8900 4650 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC VOLTAGE COMPARATOR 8-DIP" H 8900 4750 60  0001 L CNN "Description"
+F 11 "Texas Instruments" H 8900 4850 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 8900 4950 60  0001 L CNN "Status"
+	1    8700 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 1100 3250 1100
+Connection ~ 3250 1100
+Wire Wire Line
+	3250 1100 3250 1250
+$Comp
+L power:GND #PWR?
+U 1 1 60B50EE9
+P 3850 1400
+F 0 "#PWR?" H 3850 1150 50  0001 C CNN
+F 1 "GND" H 3855 1227 50  0000 C CNN
+F 2 "" H 3850 1400 50  0001 C CNN
+F 3 "" H 3850 1400 50  0001 C CNN
+	1    3850 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 3550 8800 3550
+Wire Wire Line
+	8500 4050 8600 4050
+Wire Wire Line
+	8700 4050 8700 3950
+$Comp
+L power:GND #PWR?
+U 1 1 60B51BAD
+P 8600 4050
+F 0 "#PWR?" H 8600 3800 50  0001 C CNN
+F 1 "GND" H 8605 3877 50  0000 C CNN
+F 2 "" H 8600 4050 50  0001 C CNN
+F 3 "" H 8600 4050 50  0001 C CNN
+	1    8600 4050
+	1    0    0    -1  
+$EndComp
+Connection ~ 8600 4050
+Wire Wire Line
+	8600 4050 8700 4050
+$Comp
+L power:+12V #PWR?
+U 1 1 60B52054
+P 8500 3450
+F 0 "#PWR?" H 8500 3300 50  0001 C CNN
+F 1 "+12V" H 8515 3623 50  0000 C CNN
+F 2 "" H 8500 3450 50  0001 C CNN
+F 3 "" H 8500 3450 50  0001 C CNN
+	1    8500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B5319A
+P 2050 2650
+F 0 "R?" H 1980 2604 50  0000 R CNN
+F 1 "100" H 1980 2695 50  0000 R CNN
+F 2 "" V 1980 2650 50  0001 C CNN
+F 3 "~" H 2050 2650 50  0001 C CNN
+	1    2050 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B54715
+P 4250 1100
+F 0 "R?" V 4457 1100 50  0000 C CNN
+F 1 "100" V 4366 1100 50  0000 C CNN
+F 2 "" V 4180 1100 50  0001 C CNN
+F 3 "~" H 4250 1100 50  0001 C CNN
+	1    4250 1100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3850 1100 4100 1100
+Connection ~ 3850 1100
+Text GLabel 4500 1100 2    50   Input ~ 0
+VREF2
+Wire Wire Line
+	4400 1100 4500 1100
+Wire Notes Line
+	500  550  4900 550 
+Wire Notes Line
+	4900 550  4900 3000
+Wire Notes Line
+	4900 3000 500  3000
+Wire Notes Line
+	500  3000 500  550 
+Text Notes 1850 3100 0    50   ~ 0
+Reference Voltage Creation
+$Comp
+L Device:C C?
+U 1 1 60B62806
+P 7850 3750
+F 0 "C?" H 7965 3796 50  0000 L CNN
+F 1 "C" H 7965 3705 50  0000 L CNN
+F 2 "" H 7888 3600 50  0001 C CNN
+F 3 "~" H 7850 3750 50  0001 C CNN
+	1    7850 3750
+	1    0    0    -1  
+$EndComp
+Text GLabel 7350 3950 0    50   Input ~ 0
+VREF2
+Text GLabel 7350 3500 0    50   Input ~ 0
+VREF1
+Wire Wire Line
+	7350 3500 7850 3500
+Wire Wire Line
+	7850 3500 7850 3600
+Wire Wire Line
+	7850 3900 7850 3950
+Wire Wire Line
+	7850 3950 7350 3950
+Wire Wire Line
+	8400 3650 8100 3650
+Wire Wire Line
+	8100 3650 8100 3500
+Wire Wire Line
+	8100 3500 7850 3500
+Connection ~ 7850 3500
+Wire Wire Line
+	8400 3850 8100 3850
+Wire Wire Line
+	8100 3850 8100 3950
+Wire Wire Line
+	8100 3950 7850 3950
+Connection ~ 7850 3950
+$Comp
+L Device:R R?
+U 1 1 60B65384
+P 8500 2900
+F 0 "R?" V 8707 2900 50  0000 C CNN
+F 1 "1M" V 8616 2900 50  0000 C CNN
+F 2 "" V 8430 2900 50  0001 C CNN
+F 3 "~" H 8500 2900 50  0001 C CNN
+	1    8500 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8650 2900 9000 2900
+Wire Wire Line
+	9000 2900 9000 3750
+Wire Wire Line
+	8350 2900 7850 2900
+Wire Wire Line
+	7850 2900 7850 3500
+$EndSCHEMATC
